@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message TextClassificationRequest {
+  string id = 1;
+  repeated string batch = 2;
+}
+
+message TextClassificationResult {
+  string label = 1;
+  float score = 2;
+}
+
+message TextClassificationResponse {
+  string id = 1;
+  int32 error_code = 2;
+  string error_status = 3;
+  repeated TextClassificationResult results = 4;
+}

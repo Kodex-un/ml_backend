@@ -1,0 +1,6 @@
+syntax = "proto3";
+import "protocol.proto";
+
+service Classifier {
+  rpc TextClassification (TextClassificationRequest) returns (TextClassificationResponse) {}
+}
